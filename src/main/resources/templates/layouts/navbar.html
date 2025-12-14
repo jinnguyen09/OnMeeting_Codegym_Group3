@@ -1,0 +1,53 @@
+<div th:fragment="navbar" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+            <a th:href="@{/}" class="logo d-flex align-items-center">
+                <h1 class="sitename">OnMeet</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a th:href="@{/}" class="active">Trang chủ</a></li>
+                    <li><a href="#about">Phòng</a></li>
+                    <li><a href="#schedule">Lịch</a></li>
+                    <li><a href="#speakers">Danh Sách</a></li>
+                    <li><a th:href="@{/venue}">Lịch Sử</a></li>
+                    <li class="dropdown"><a href="#"><span>More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a th:href="@{/speaker-details}">Speaker Details</a></li>
+                            <li><a th:href="@{/buy-tickets}">Buy Tickets</a></li>
+                            <li><a th:href="@{/terms}">Terms</a></li>
+                            <li><a th:href="@{/privacy}">Privacy</a></li>
+                            <li><a th:href="@{/404}">404</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="#">Dropdown 1</a></li>
+                            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                                <ul>
+                                    <li><a href="#">Deep Dropdown 1</a></li>
+                                    <li><a href="#">Deep Dropdown 2</a></li>
+                                    <li><a href="#">Deep Dropdown 3</a></li>
+                                    <li><a href="#">Deep Dropdown 4</a></li>
+                                    <li><a href="#">Deep Dropdown 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Dropdown 2</a></li>
+                            <li><a href="#">Dropdown 3</a></li>
+                            <li><a href="#">Dropdown 4</a></li>
+                        </ul>
+                    </li>
+                    <li><a th:href="@{/contact}">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted" th:href="@{/buy-tickets}">Buy Tickets</a>
+
+        </div>
+    </header>
+</div>
+
+
