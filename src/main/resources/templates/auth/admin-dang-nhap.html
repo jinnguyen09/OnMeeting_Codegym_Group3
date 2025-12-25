@@ -18,8 +18,8 @@
 
             <!-- Logo -->
             <div class="d-flex justify-content-center py-4">
-              <a href="../admin/admin-home.html" class="logo d-flex align-items-center w-auto">
-                <img src="../../static/admin/assets/img/logo.png" alt="Logo">
+              <a th:href="@{/admin}" class="logo d-flex align-items-center w-auto">
+                <img th:src="@{/admin/assets/img/logo.png}" alt="Logo">
                 <span class="d-none d-lg-block">OnMeet</span>
               </a>
             </div>
@@ -79,7 +79,7 @@
                   <div class="col-12">
                     <p class="small mb-0">
                       Chưa có tài khoản?
-                      <a href="admin-dang-ky.html">Đăng ký ngay</a>
+                      <a th:href="@{admin-dang-ky}">Đăng ký ngay</a>
                     </p>
                   </div>
 
@@ -105,8 +105,18 @@
   <i class="bi bi-arrow-up-short"></i>
 </a>
 
-<!-- Footer -->
-<div th:replace="~{layouts/admin-footer :: admin-footer}"></div>
+<!-- Vendor JS Files -->
+<script th:src="@{/admin/assets/vendor/apexcharts/apexcharts.min.js}"></script>
+<script th:src="@{/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/admin/assets/vendor/chart.js/chart.min.js}"></script>
+<script th:src="@{/admin/assets/vendor/echarts/echarts.min.js}"></script>
+<script th:src="@{/admin/assets/vendor/quill/quill.min.js}"></script>
+<script th:src="@{/admin/assets/vendor/simple-datatables/simple-datatables.js}"></script>
+<script th:src="@{/admin/assets/vendor/tinymce/tinymce.min.js}"></script>
+<script th:src="@{/admin/assets/vendor/php-email-form/validate.js}"></script>
+
+<!-- Template Main JS File -->
+<script th:src="@{/admin/assets/js/main.js}"></script>
 
 </body>
 </html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý người dùng</title>
+    <div th:replace="~{layouts/admin-head :: admin-head}"></div>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div th:replace="~{layouts/admin-navbar :: admin-navbar}"></div>
+
+<main id="main" class="main">
+
+    <!-- Page Title -->
+    <div class="pagetitle">
+        <h1>Quản lý người dùng</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Người dùng</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Content -->
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <!-- Title + Add -->
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="card-title mb-0">Danh sách người dùng</h5>
+                            <button class="btn btn-primary">
+                                <i class="bi bi-plus-circle"></i> Thêm người dùng
+                            </button>
+                        </div>
+
+                        <!-- Search -->
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                  <span class="input-group-text">
+                    <i class="bi bi-search"></i>
+                  </span>
+                                    <input type="text"
+                                           class="form-control"
+                                           placeholder="Tìm theo số điện thoại hoặc email">
+                                    <button class="btn btn-secondary">Tìm kiếm</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Table -->
+                        <table class="table table-bordered table-hover">
+                            <thead class="table-light">
+                            <tr>
+                                <th>#</th>
+                                <th>Tên</th>
+                                <th>Tuổi</th>
+                                <th>Số điện thoại</th>
+                                <th>Email</th>
+                                <th>Hành động</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Nguyễn Văn A</td>
+                                <td>20</td>
+                                <td>0123456789</td>
+                                <td>a@gmail.com</td>
+                                <td>
+                                    <button class="btn btn-sm btn-warning">
+                                        <i class="bi bi-pencil"></i> Sửa
+                                    </button>
+                                    <button class="btn btn-sm btn-danger">
+                                        <i class="bi bi-trash"></i> Xóa
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Trần Thị B</td>
+                                <td>22</td>
+                                <td>0987654321</td>
+                                <td>b@gmail.com</td>
+                                <td>
+                                    <button class="btn btn-sm btn-warning">
+                                        <i class="bi bi-pencil"></i> Sửa
+                                    </button>
+                                    <button class="btn btn-sm btn-danger">
+                                        <i class="bi bi-trash"></i> Xóa
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Back to top -->
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<!-- Footer -->
+<div th:replace="~{layouts/admin-footer :: admin-footer}"></div>
+
+</body>
+</html>

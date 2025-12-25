@@ -2,13 +2,13 @@
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-            <a th:href="@{/home}" class="logo d-flex align-items-center">
+            <a th:href="@{/}" class="logo d-flex align-items-center">
                 <h1 class="sitename">OnMeet</h1>
             </a>
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a th:href="@{/home}" th:classappend="${activePage == 'home'} ? 'active'">Trang chủ</a></li>
+                    <li><a th:href="@{/}" th:classappend="${activePage == 'home'} ? 'active'">Trang chủ</a></li>
                     <li><a href="#about">Giới thiệu</a></li>
                     <li><a th:href="@{/lich-hop}" th:classappend="${activePage == 'lich-hop'} ? 'active'">Lịch họp</a></li>
                     <li><a th:href="@{/phong-hop}" th:classappend="${activePage == 'phong-hop'} ? 'active'">Phòng họp</a></li>
