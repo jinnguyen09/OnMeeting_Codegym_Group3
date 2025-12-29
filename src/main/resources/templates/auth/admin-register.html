@@ -3,7 +3,7 @@
 
 <head th:replace="~{layouts/admin-head :: admin-head}">
   <meta charset="UTF-8">
-  <title>Admin - Đăng nhập</title>
+  <title>Admin - Đăng ký tài khoản</title>
 </head>
 
 <body>
@@ -29,32 +29,44 @@
 
                 <div class="pt-4 pb-2">
                   <h5 class="card-title text-center pb-0 fs-4">
-                    Đăng nhập hệ thống
+                    Tạo tài khoản quản trị
                   </h5>
                   <p class="text-center small">
-                    Vui lòng nhập tên đăng nhập và mật khẩu
+                    Vui lòng nhập thông tin cá nhân để đăng ký tài khoản
                   </p>
                 </div>
 
                 <form class="row g-3 needs-validation" novalidate>
 
                   <div class="col-12">
-                    <label for="yourUsername" class="form-label">
-                      Tên đăng nhập
-                    </label>
+                    <label for="yourName" class="form-label">Họ và tên</label>
+                    <input type="text" name="name" class="form-control" id="yourName" required>
+                    <div class="invalid-feedback">
+                      Vui lòng nhập họ và tên!
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="yourEmail" class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" id="yourEmail" required>
+                    <div class="invalid-feedback">
+                      Vui lòng nhập địa chỉ email hợp lệ!
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="yourUsername" class="form-label">Tên đăng nhập</label>
                     <div class="input-group has-validation">
-                      <span class="input-group-text">@</span>
+                      <span class="input-group-text" id="inputGroupPrepend">@</span>
                       <input type="text" name="username" class="form-control" id="yourUsername" required>
                       <div class="invalid-feedback">
-                        Vui lòng nhập tên đăng nhập.
+                        Vui lòng chọn tên đăng nhập!
                       </div>
                     </div>
                   </div>
 
                   <div class="col-12">
-                    <label for="yourPassword" class="form-label">
-                      Mật khẩu
-                    </label>
+                    <label for="yourPassword" class="form-label">Mật khẩu</label>
                     <input type="password" name="password" class="form-control" id="yourPassword" required>
                     <div class="invalid-feedback">
                       Vui lòng nhập mật khẩu!
@@ -63,23 +75,26 @@
 
                   <div class="col-12">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
-                      <label class="form-check-label" for="rememberMe">
-                        Ghi nhớ đăng nhập
+                      <input class="form-check-input" name="terms" type="checkbox" id="acceptTerms" required>
+                      <label class="form-check-label" for="acceptTerms">
+                        Tôi đồng ý với <a href="#">điều khoản và điều kiện</a>
                       </label>
+                      <div class="invalid-feedback">
+                        Bạn phải đồng ý với điều khoản trước khi đăng ký.
+                      </div>
                     </div>
                   </div>
 
                   <div class="col-12">
                     <button class="btn btn-primary w-100" type="submit">
-                      Đăng nhập
+                      Đăng ký tài khoản
                     </button>
                   </div>
 
                   <div class="col-12">
                     <p class="small mb-0">
-                      Chưa có tài khoản?
-                      <a th:href="@{admin-dang-ky}">Đăng ký ngay</a>
+                      Đã có tài khoản?
+                      <a th:href="@{admin-login}">Đăng nhập</a>
                     </p>
                   </div>
 
@@ -95,7 +110,6 @@
           </div>
         </div>
       </div>
-
     </section>
 
   </div>

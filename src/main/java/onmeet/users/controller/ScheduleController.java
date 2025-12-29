@@ -5,10 +5,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class LienHeController {
-    @GetMapping("/lien-he")
-    public String lienhe(Model model) {
-        model.addAttribute("activePage", "lien-he");
-        return "users/lien-he";
+public class ScheduleController {
+    @GetMapping("/schedule")
+    public String schedule(Model model) {
+        model.addAttribute("activePage", "schedule");
+        return "users/schedule";
     }
 }

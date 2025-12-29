@@ -5,10 +5,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class LichHopController {
-    @GetMapping("/lich-hop")
-    public String lichHop(Model model) {
-        model.addAttribute("activePage", "lich-hop");
-        return "users/lich-hop";
+public class EventsController {
+    @GetMapping("/events")
+    public String sukien(Model model) {
+        model.addAttribute("activePage", "events");
+        return "users/events";
     }
 }

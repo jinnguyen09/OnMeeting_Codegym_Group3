@@ -5,10 +5,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class SuKienController {
-    @GetMapping("/su-kien")
-    public String sukien(Model model) {
-        model.addAttribute("activePage", "su-kien");
-        return "users/su-kien";
+public class ProfileController {
+    @GetMapping("/profile")
+    public String profile(Model model) {
+        model.addAttribute("activePage", "profile");
+        return "users/profile";
     }
 }

@@ -2,7 +2,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a th:href="@{/admin/home}" class="logo d-flex align-items-center">
+            <a th:href="@{/admin}" class="logo d-flex align-items-center">
                 <img th:src="@{/admin/assets/img/logo.png}" alt="">
                 <span class="d-none d-lg-block">OnMeet</span>
             </a>
@@ -156,7 +156,7 @@
                 </a>
                 <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a th:href="@{/admin-quan-ly-nguoi-dung}">
+                        <a th:href="@{/admin-users}">
                             <i class="bi bi-circle"></i><span>Danh sách người dùng</span>
                         </a>
                     </li>
@@ -169,7 +169,7 @@
                 </a>
                 <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a th:href="@{/admin-quan-ly-phong-hop}">
+                        <a th:href="@{/admin-department}">
                             <i class="bi bi-circle"></i><span>Danh sách phòng họp</span>
                         </a>
                     </li>
@@ -198,13 +198,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" th:href="@{/admin-dang-ky}">
+                <a class="nav-link collapsed" th:href="@{/admin-register}">
                     <i class="bi bi-card-list"></i>
                     <span>Đăng ký</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" th:href="@{/admin-dang-nhap}">
+                <a class="nav-link collapsed" th:href="@{/admin-login}">
                     <i class="bi bi-box-arrow-in-right"></i>
                     <span>Đăng nhập</span>
                 </a>

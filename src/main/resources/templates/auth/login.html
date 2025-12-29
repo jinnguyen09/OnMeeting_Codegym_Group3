@@ -56,7 +56,7 @@
                             <div>Bạn đã đăng xuất thành công.</div>
                         </div>
 
-                        <form th:action="@{/dang-nhap}" method="post">
+                        <form th:action="@{/login}" method="post">
 
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="username" name="username" placeholder="name@example.com" required>
@@ -95,7 +95,7 @@
 
                             <div class="text-center">
                                 <span class="text-muted small">Bạn chưa có tài khoản?</span>
-                                <a th:href="@{/dang-ky}" class="text-decoration-none fw-bold ms-1">Đăng ký ngay</a>
+                                <a th:href="@{/register}" class="text-decoration-none fw-bold ms-1">Đăng ký ngay</a>
                             </div>
 
                         </form>
